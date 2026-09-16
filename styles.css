@@ -235,8 +235,8 @@ main {
 
 .book img {
   width: 100%;
-  aspect-ratio: 1.414 / 1;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .book-one {
@@ -391,8 +391,7 @@ main {
 .guide-cover img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1.414 / 1;
-  object-fit: cover;
+  object-fit: contain;
   border: 7px solid var(--paper);
   box-shadow: 0 28px 65px rgba(23, 23, 91, 0.15);
 }
