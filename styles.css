@@ -116,12 +116,12 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.86fr) minmax(480px, 1.14fr);
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 0.95fr);
   align-items: center;
-  width: min(100% - 40px, 1240px);
-  min-height: min(780px, calc(100svh - 86px));
+  width: min(100% - 40px, 1160px);
+  min-height: min(650px, calc(100svh - 86px));
   margin: 0 auto;
-  padding: clamp(64px, 8vw, 118px) 0 clamp(74px, 9vw, 130px);
+  padding: clamp(48px, 5vw, 72px) 0 clamp(52px, 5.5vw, 80px);
 }
 
 .hero-copy {
@@ -140,7 +140,7 @@ main {
 .hero h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(3.25rem, 6.2vw, 6.5rem);
+  font-size: clamp(3rem, 5vw, 4.75rem);
   font-weight: 900;
   letter-spacing: -0.075em;
   line-height: 1.08;
@@ -152,11 +152,11 @@ main {
 }
 
 .hero-lede {
-  max-width: 540px;
-  margin: 34px 0 26px;
+  max-width: 500px;
+  margin: 24px 0 18px;
   color: var(--ink-muted);
-  font-size: clamp(1.04rem, 1.4vw, 1.22rem);
-  line-height: 1.9;
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
+  line-height: 1.75;
 }
 
 .text-link,
@@ -191,7 +191,7 @@ main {
 
 .hero-visual {
   position: relative;
-  min-height: 520px;
+  min-height: 410px;
 }
 
 .hero-visual::before {
@@ -224,7 +224,7 @@ main {
 
 .book {
   position: absolute;
-  width: 63%;
+  width: 54%;
   margin: 0;
   overflow: hidden;
   background: var(--paper);
@@ -241,25 +241,25 @@ main {
 
 .book-one {
   top: 4%;
-  left: 9%;
+  left: 16%;
   transform: rotate(-8deg);
 }
 
 .book-two {
   top: 21%;
-  left: 31%;
+  left: 37%;
   transform: rotate(7deg);
 }
 
 .book-three {
   top: 43%;
-  left: 4%;
+  left: 12%;
   transform: rotate(-4deg);
 }
 
 .book-four {
   top: 58%;
-  left: 30%;
+  left: 35%;
   transform: rotate(4deg);
 }
 
@@ -269,13 +269,13 @@ main {
   bottom: 0;
   z-index: 2;
   display: grid;
-  width: 108px;
+  width: 86px;
   aspect-ratio: 1;
   place-items: center;
   color: var(--paper);
   background: var(--navy);
   border-radius: 50%;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1.5;
@@ -286,18 +286,18 @@ main {
 .guide-intro {
   display: grid;
   grid-template-columns: 1fr 0.75fr;
-  gap: clamp(40px, 10vw, 140px);
+  gap: clamp(36px, 7vw, 96px);
   align-items: end;
   width: min(100% - 40px, 1100px);
   margin: 0 auto;
-  padding: clamp(90px, 12vw, 170px) 0 clamp(64px, 9vw, 120px);
+  padding: clamp(60px, 7vw, 96px) 0 clamp(44px, 5vw, 68px);
   border-top: 1px solid var(--line);
 }
 
 .guide-intro h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.45rem, 5vw, 4.8rem);
+  font-size: clamp(2.3rem, 4vw, 3.8rem);
   letter-spacing: -0.055em;
   line-height: 1.2;
 }
@@ -305,8 +305,8 @@ main {
 .guide-intro > p {
   margin: 0 0 8px;
   color: var(--ink-muted);
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: 1rem;
+  line-height: 1.75;
 }
 
 .guide-list {
@@ -319,10 +319,10 @@ main {
   position: relative;
   display: grid;
   grid-template-columns: minmax(340px, 0.92fr) minmax(0, 1.08fr);
-  gap: clamp(50px, 8vw, 110px);
+  gap: clamp(44px, 6vw, 76px);
   align-items: center;
-  min-height: 640px;
-  padding: clamp(62px, 9vw, 115px) 0;
+  min-height: 0;
+  padding: clamp(48px, 5vw, 72px) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -354,7 +354,7 @@ main {
 
 .guide-number {
   position: absolute;
-  top: 42px;
+  top: 22px;
   right: 0;
   color: rgba(23, 23, 91, 0.08);
   font-family: var(--serif);
@@ -423,14 +423,14 @@ main {
 .guide-content h2 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.45rem, 4.5vw, 4.25rem);
+  font-size: clamp(2.3rem, 3.6vw, 3.5rem);
   letter-spacing: -0.055em;
   line-height: 1.16;
 }
 
 .guide-summary {
   max-width: 620px;
-  margin: 26px 0 22px;
+  margin: 20px 0 16px;
   color: var(--ink-muted);
   font-size: clamp(1rem, 1.25vw, 1.12rem);
   line-height: 1.9;
@@ -462,14 +462,14 @@ main {
 }
 
 .guide-footer {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .tags span {
@@ -532,8 +532,8 @@ main {
 .next-step {
   position: relative;
   width: min(100% - 40px, 1180px);
-  margin: clamp(70px, 10vw, 140px) auto 0;
-  padding: clamp(62px, 8vw, 100px) clamp(28px, 7vw, 90px);
+  margin: clamp(56px, 7vw, 96px) auto 0;
+  padding: clamp(52px, 6vw, 72px) clamp(28px, 6vw, 72px);
   overflow: hidden;
   color: var(--paper);
   background: var(--navy);
@@ -564,14 +564,14 @@ main {
   max-width: 720px;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-size: clamp(2.35rem, 4.5vw, 4rem);
   letter-spacing: -0.06em;
   line-height: 1.18;
 }
 
 .next-step > p:not(.eyebrow) {
   max-width: 650px;
-  margin: 26px 0 18px;
+  margin: 20px 0 14px;
   color: #dddced;
   font-size: 1.05rem;
 }
@@ -587,7 +587,7 @@ main {
   gap: 28px;
   align-items: center;
   width: min(100% - 40px, 1180px);
-  min-height: 180px;
+  min-height: 144px;
   margin: 0 auto;
   color: var(--ink-muted);
   font-size: 0.82rem;
@@ -658,16 +658,16 @@ main {
 
 @media (max-width: 980px) {
   .hero {
-    grid-template-columns: minmax(0, 0.95fr) minmax(390px, 1.05fr);
+    grid-template-columns: minmax(0, 1fr) minmax(350px, 0.92fr);
   }
 
   .hero-visual {
-    min-height: 450px;
+    min-height: 360px;
   }
 
   .guide {
     grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr);
-    gap: 54px;
+    gap: 44px;
   }
 }
 
@@ -697,27 +697,27 @@ main {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 70px;
+    padding: 48px 0 56px;
   }
 
   .hero h1 {
-    font-size: clamp(3.2rem, 15vw, 5.25rem);
+    font-size: clamp(2.8rem, 12vw, 4rem);
   }
 
   .hero-visual {
-    width: calc(100% + 28px);
-    min-height: 420px;
-    margin: 60px 0 0 -14px;
+    width: 100%;
+    min-height: 300px;
+    margin: 36px auto 0;
   }
 
   .hero-stamp {
     right: 2%;
-    width: 90px;
+    width: 74px;
   }
 
   .guide-intro {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 20px;
   }
 
   .guide-intro > p {
@@ -726,9 +726,9 @@ main {
 
   .guide {
     grid-template-columns: 1fr;
-    gap: 54px;
+    gap: 36px;
     min-height: 0;
-    padding: 82px 0 92px;
+    padding: 56px 0 64px;
   }
 
   .guide:nth-child(even) .guide-cover,
@@ -749,10 +749,10 @@ main {
 
   .guide-number,
   .guide:nth-child(even) .guide-number {
-    top: 36px;
+    top: 22px;
     right: 0;
     left: auto;
-    font-size: 7rem;
+    font-size: 5.5rem;
   }
 
   .guide-cover {
@@ -760,7 +760,7 @@ main {
   }
 
   .guide-cover figcaption {
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   .download-button {
@@ -769,7 +769,7 @@ main {
   }
 
   .next-step {
-    margin-top: 70px;
+    margin-top: 56px;
   }
 
   .next-step::after {
@@ -787,7 +787,7 @@ main {
     grid-template-columns: 1fr;
     gap: 14px;
     align-content: center;
-    padding: 38px 0;
+    padding: 28px 0;
   }
 
   .copyright {
@@ -805,7 +805,7 @@ main {
   }
 
   .hero {
-    padding-top: 58px;
+    padding-top: 44px;
   }
 
   .hero h1 {
@@ -813,11 +813,11 @@ main {
   }
 
   .hero-lede {
-    margin-top: 26px;
+    margin-top: 20px;
   }
 
   .hero-visual {
-    min-height: 350px;
+    min-height: 270px;
   }
 
   .book {
@@ -826,16 +826,16 @@ main {
   }
 
   .hero-stamp {
-    width: 78px;
-    font-size: 0.68rem;
+    width: 68px;
+    font-size: 0.62rem;
   }
 
   .guide-intro {
-    padding-top: 90px;
+    padding-top: 60px;
   }
 
   .guide-content h2 {
-    font-size: clamp(2.4rem, 13vw, 3.25rem);
+    font-size: clamp(2.15rem, 10.5vw, 2.8rem);
   }
 
   .guide-cover::after {
