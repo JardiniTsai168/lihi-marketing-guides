@@ -48,12 +48,61 @@
   <body>
     <a class="skip-link" href="#guides">跳到攻略列表</a>
 
-    <header class="site-header">
-      <a class="brand" href="https://lihi.io/" aria-label="前往 lihi.io">
-        <img src="assets/lihi-logo.png" width="130" height="46" alt="lihi.io" />
-      </a>
-      <p><span aria-hidden="true"></span>註冊限定・免費下載</p>
-    </header>
+    <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+      <div class="nav-inner">
+        <a class="nav-logo" href="https://lihi.io/" aria-label="前往 lihi.io 首頁">
+          <img src="assets/lihi-logo.png" width="130" height="46" alt="lihi.io" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="https://lihidomain.com/">品牌網域</a></li>
+          <li><a href="https://knowledge.lihi.io/pricing/">方案價格</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" type="button" aria-expanded="false">
+              行銷資源 <span aria-hidden="true">▾</span>
+            </button>
+            <ul class="nav-dropdown">
+              <li><a href="https://knowledge.lihi.io/">知識庫</a></li>
+              <li><a href="https://knowledge.lihi.io/recommended-course-ch/">官方課程推薦</a></li>
+              <li><a href="https://verify.lihi.io/">lihi 證照驗證</a></li>
+              <li><a href="https://lihidomain.com/link-domain-entrepreneur/">99 元 .link 網域</a></li>
+            </ul>
+          </li>
+          <li><a href="https://knowledge.lihi.io/about-us-ch/">關於我們</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="nav-login" href="https://app.lihi.io/admin/login">登入</a>
+          <a class="nav-register" href="https://lihi.io/go/register">免費註冊</a>
+        </div>
+        <button
+          class="nav-hamburger"
+          type="button"
+          aria-label="開啟選單"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <a href="https://lihidomain.com/">品牌網域</a>
+        <a href="https://knowledge.lihi.io/pricing/">方案價格</a>
+        <button class="mobile-submenu-toggle" type="button" aria-expanded="false">
+          行銷資源 <span aria-hidden="true">▾</span>
+        </button>
+        <div class="mobile-submenu">
+          <a href="https://knowledge.lihi.io/">知識庫</a>
+          <a href="https://knowledge.lihi.io/recommended-course-ch/">官方課程推薦</a>
+          <a href="https://verify.lihi.io/">lihi 證照驗證</a>
+          <a href="https://lihidomain.com/link-domain-entrepreneur/">99 元 .link 網域</a>
+        </div>
+        <a href="https://knowledge.lihi.io/about-us-ch/">關於我們</a>
+        <div class="mobile-actions">
+          <a class="nav-login" href="https://app.lihi.io/admin/login">登入</a>
+          <a class="nav-register" href="https://lihi.io/go/register">免費註冊</a>
+        </div>
+      </div>
+      <button class="mobile-overlay" type="button" aria-label="關閉選單" tabindex="-1"></button>
+    </nav>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
@@ -262,10 +311,34 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <img src="assets/lihi-logo.png" width="112" height="40" alt="lihi.io" />
-      <p>讓每一次分享，都成為品牌的養分。</p>
-      <p class="copyright">© <span id="year">2026</span> lihi.io</p>
+    <footer class="site-footer" id="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <img src="assets/lihi-logo.png" width="112" height="40" alt="lihi.io" />
+          <p>利害短網址有限公司 | 2017 年成立，服務超過 5,000+ 品牌</p>
+          <p>© 2018–<span id="year">2026</span>　統編 82908327</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="https://knowledge.lihi.io/terms-of-use/" target="_blank" rel="noopener noreferrer">服務條款</a>
+            <a href="https://knowledge.lihi.io/privacy-policy/" target="_blank" rel="noopener noreferrer">隱私權政策</a>
+            <a href="https://knowledge.lihi.io/service-level-agreement/" target="_blank" rel="noopener noreferrer">服務等級</a>
+            <a href="https://report.lihi.io/" target="_blank" rel="noopener noreferrer">檢舉網址</a>
+            <a href="mailto:service@lihi.io">service@lihi.io</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/lihi.io" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+            </a>
+            <a href="https://www.instagram.com/lihi.io.tw" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" /></svg>
+            </a>
+            <a href="https://www.youtube.com/@lihi_io" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <div class="download-toast" role="status" aria-live="polite" aria-atomic="true">
