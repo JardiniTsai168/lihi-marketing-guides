@@ -85,9 +85,10 @@ async function run() {
         documentWidth: document.documentElement.scrollWidth,
         buttonHeights: [...document.querySelectorAll('.download-button')].map((button) => button.getBoundingClientRect().height),
         shell: {
-          heroTopGap: document.querySelector('.hero .eyebrow').getBoundingClientRect().top - document.querySelector('.site-nav').getBoundingClientRect().bottom,
+          heroTopGap: document.querySelector('.hero h1').getBoundingClientRect().top - document.querySelector('.site-nav').getBoundingClientRect().bottom,
           introTopPadding: parseFloat(getComputedStyle(document.querySelector('.guide-intro')).paddingTop),
           hasChooseYourGuide: document.body.textContent.includes('CHOOSE YOUR GUIDE'),
+          hasFieldGuides: document.body.textContent.includes('LIHI FIELD GUIDES'),
           navLinks: [...document.querySelectorAll('.nav-links > li > a, .nav-links > li > button')].map((item) => item.textContent.trim().replace(/\s+/g, ' ')),
           footerLinks: [...document.querySelectorAll('.footer-links a')].map((item) => item.textContent.trim()),
           footerSocialCount: document.querySelectorAll('.footer-social a').length
@@ -153,6 +154,9 @@ async function run() {
       : []),
     ...(testCase.shell.hasChooseYourGuide
       ? [{ viewport: testCase.viewport, type: "choose-your-guide-copy" }]
+      : []),
+    ...(testCase.shell.hasFieldGuides
+      ? [{ viewport: testCase.viewport, type: "field-guides-copy" }]
       : []),
     ...(JSON.stringify(testCase.shell.navLinks) !== JSON.stringify(["品牌網域", "方案價格", "行銷資源 ▾", "關於我們"])
       ? [{ viewport: testCase.viewport, type: "nav-links", links: testCase.shell.navLinks }]
